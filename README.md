@@ -1,24 +1,52 @@
-# README
+# アプリケーションの概要
+利用者のニーズに合った理学療法士をマッチングさせるサービスです。
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+# 機能一覧
+・一覧表示機能
+・投稿機能(画像含む)
+・削除機能
+・編集機能
+・サインイン機能(理学療法士側)
 
-Things you may want to cover:
+# 技術一覧
+Ruby on Rails,html,css
 
-* Ruby version
+# テーブル設計
 
-* System dependencies
+## users テーブル
 
-* Configuration
+| Column                    | Type    | Options     |
+| --------                  | ------- | ----------- |
+| email                     | string  | null: false |
+| password                  | string  | null: false |
+| name                      | string  | null: false |
+| specialize_id(activehash) | integer | null: false |
+| part_id(activehash)       | integer | null: false |
+| experience                | integer | null: false |
+| hobby                     | string  | null: false |
+| word                      | string  | null: false |
 
-* Database creation
 
-* Database initialization
 
-* How to run the test suite
+### Association
 
-* Services (job queues, cache servers, search engines, etc.)
+- has_many :purchases
+- has_many :items
 
-* Deployment instructions
+## articls テーブル
 
-* ...
+| Column                       | Type       | Options                       |
+| ---------------------------- | ---------- | ----------------------------- |
+| name                         | string     | null: false                   |
+| explanation                  | text       | null: false                   |
+| price                        | integer    | null: false                   |
+| category_id(active_hash)     | integer    | null: false                   |
+| status_id(activehash)        | integer    | null: false                   |
+| charge_id(activehash)        | integer    | null: false                   |
+| area_id(activehash)          | integer    | null: false                   |
+| day_id(activehash)           | integer    | null: false                   |
+| user                         | references | null: false, foreign_key: true|
+ ### Association
+
+- belongs_to :user
+- has_one :purchase

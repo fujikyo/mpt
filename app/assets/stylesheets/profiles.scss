@@ -1,0 +1,102 @@
+// ヘッダー
+.header {
+  height: 270px;
+  display: flex;
+  align-items: center;
+}
+
+.header-left {
+ font-size: 40px;
+ margin-left: 600px;
+ position: absolute;
+}
+
+.header-lists {
+  display: flex;
+  align-items: center;
+  position: relative;
+  left: 1400px;
+ }
+
+.header-list {
+  font-size: 17px;
+  margin: 20px;
+}
+
+ul {
+  list-style: none;
+}
+
+.sub-logo {
+  font-size: 19px;
+
+}
+// ヘッダー
+
+// 画像と説明部分
+.top-image {
+  width: 100%;
+  height: 1200px;
+  background-color: yellow;
+  position: relative;
+  display: flex;
+  justify-content: center;
+
+}
+
+.pt-image {
+  width: 100%;
+  height: 1000px;
+}
+
+.image-letter {
+  position: absolute;
+  top: 150px;
+  left: 300px;
+  font-size: 60px;
+ }
+ 
+ // サービス
+ .service {
+   width: 1000px;
+   height: 600px;
+   background-color: yellowgreen;
+   margin: 0 auto;
+ }
+
+ .service-contents {
+  display: flex;
+  text-align: center;
+ }
+
+ .service h1 {
+  text-align: center;
+ }
+
+// 理学療法士一覧
+.pt-index {
+  width: 1000px;
+  margin: 0 auto;
+  background-color: gainsboro;
+}
+
+.pt-index h1 {
+  text-align: center;
+}
+
+.pt-all-contents {
+  display: flex;
+}
+
+.pt-content {
+  margin: 0 auto;  
+}
+// 理学療法士一覧
+
+// footer
+.footer {
+  height: 270px;
+  width: 100%;
+  background-color: goldenrod;
+}
+// footer
